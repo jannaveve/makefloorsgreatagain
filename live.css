@@ -1,0 +1,88 @@
+body {
+    color: floralwhite;
+    font-family: sans-serif;
+    margin: 0px;
+        background-image: url(img/hardwoodfloors.jpg);
+    background-size: 100%;
+}
+
+
+header {
+
+    color: white;
+    padding: 20px 40px 10px 50px;
+    text-align: right;
+    text-transform: uppercase;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;    
+}
+
+li {
+    display: inline-block;
+    margin-right: 20;
+    text-align: center;
+    width: 100px;
+    text-transform: uppercase;
+}
+a {
+     text-decoration: none;   
+}
+
+a:visited{
+    color: inherit;  
+}
+
+
+
+div.live {
+    display: inline-block;
+    padding-top: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+section {
+    background-image: url(img/hardwoodfloors.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+
+/* mobile stuff*/
+@media screen and (max-width: 1375px){
+  
+    section{
+        padding-left: 15%;
+        
+    }
+    div.live {
+        width: 460;
+        margin-right: 0px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header {
+    padding: 20px 30px 10px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    
+    section {
+        padding-left: 5%;
+        
+    }
+    div.live {
+        margin-right: 0px;
+        padding-top: 10px;
+    }
+}
+
+
