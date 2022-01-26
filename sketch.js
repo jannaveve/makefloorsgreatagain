@@ -3,18 +3,17 @@ let url = 'https://io.adafruit.com/api/v2/jahrndt/feeds/trumptweets';
 
 let counter = 0;
 
-let myFont;
-function preload() {
- 
-}
+let tweet;
+
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
+  createCanvas(windowWidth-windowWidth/4, windowWidth/3);
+  //textFont(Arial);
+  tweet = loadImage('img/twitter.png');
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth-windowWidth/4, windowHeight/3);
 }
 
 function draw() {
@@ -26,7 +25,8 @@ function draw() {
 
   }
   counter++;
-
+     
+image(tweet,0+10,0,30,30);
 }
 
 function getData() {
@@ -45,12 +45,12 @@ function getData() {
     //ellipse(data, height / 2, 25, 25);
     // print out the data we're keen to see
     //console.log(data);
-//noStroke();  
-//textSize(32);
-//fill(255,0,0);
-text(data, width/8, height/3,width/2-300,height-100);
-  //let blockquote = createElement('blockquote', data);
+noStroke();  
+textSize(36);
+fill(255);
+rect(0,0,width,height);
+fill(29,161,242);    
+text(data, 50,10,width-50,height-20);
   });
-   
 
 }
